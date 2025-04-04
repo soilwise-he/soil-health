@@ -16,9 +16,10 @@ jobs:
       - run: git checkout HEAD^
       - name: widoco
         id: widoco
-        uses: soilwise-he/widoco-action@v0.2
+        uses: soilwise-he/widoco-action@v0.3
         with:
-          file-input: ../../github/workspace/soil_health_KG.ttl
+          file-input: /github/workspace/soil_health_KG.ttl
+          folder-output: /github/workspace/html
           options: -excludeProvenance -getOntologyMetadata
       - uses: actions/checkout@v4
         with:
@@ -26,7 +27,7 @@ jobs:
           path: pages
       - name: Copy files
         run: |
-          cp -R ./out ./pages
+          cp -R ./html ./pages
       - name: Commit files
         run: |
           cd pages
