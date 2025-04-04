@@ -9,17 +9,12 @@ jobs:
     container:
       image: ghcr.io/dgarijo/widoco:v1.4.25
     steps:
-      - uses: actions/checkout@v4
-        with:
-          repository: https://github.com/soilwise-he/soil-health-knowledge-graph
-          path: kg
       - run: mkdir /usr/local/widoco/out 
       - run: wget https://github.com/soilwise-he/soil-health-knowledge-graph/raw/refs/heads/main/soil_health_KG.ttl -o ./kg.ttl 
-      - run: java -jar /usr/local/widoco/widoco.jar -ontFile ./kg/soil_health_KG.ttl -outFolder /usr/local/widoco/out -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
+      - run: java -jar /usr/local/widoco/widoco.jar -ontFile ./kg.ttl -outFolder /usr/local/widoco/out -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
       - run: ls /usr/local/widoco/out
       - uses: actions/checkout@v4
         with:
-          repository: https://github.com/soilwise-he/soil-health
           ref: gh-pages
           path: pages
       - name: Copy files
