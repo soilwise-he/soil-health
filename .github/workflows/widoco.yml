@@ -30,7 +30,7 @@ jobs:
           path: pages
       - name: Copy files
         run: |
-          mv ./html/index-en.html .html/index.html
+          mv -f ./html/index-en.html ./html/index.html
           cp -r ./html/* ./pages 
       - name: Commit files
         run: |
