@@ -3408,9 +3408,9 @@ _:genid21 <http://aims.fao.org/aos/agrontology#makeUseOf> <https://soilwise-he.g
 <https://soilwise-he.github.io/soil-health#SoilNutrientStatus> <http://aims.fao.org/aos/agrontology#affects> <https://soilwise-he.github.io/soil-health#SoilAnimalDiversity> .
 <https://soilwise-he.github.io/soil-health#SoilNutrientStatus> <http://aims.fao.org/aos/agrontology#affects> <https://soilwise-he.github.io/soil-health#SoilMicroorganismDiversity> .
 <https://soilwise-he.github.io/soil-health#SoilNutrientStatus> <http://aims.fao.org/aos/agrontology#affects> _:genid22 .
-_:genid22 <http://purl.obolibrary.org/obo/BFO_0000066> <https://soilwise-he.github.io/soil-health#NaturalSoils> .
+_:genid22 <http://purl.obolibrary.org/obo/BFO_0000066> <https://soilwise-he.github.io/soil-health#AgriculturalSoils> .
 <https://soilwise-he.github.io/soil-health#SoilNutrientStatus> <http://aims.fao.org/aos/agrontology#affects> _:genid23 .
-_:genid23 <http://purl.obolibrary.org/obo/BFO_0000066> <https://soilwise-he.github.io/soil-health#AgriculturalSoils> .
+_:genid23 <http://purl.obolibrary.org/obo/BFO_0000066> <https://soilwise-he.github.io/soil-health#NaturalSoils> .
 <https://soilwise-he.github.io/soil-health#SoilNutrientStatus> <http://www.w3.org/2004/02/skos/core#definition> "Soil nutrient status is defined by appropriate levels of available macronutrients, i.e. nitrogen, phosphorus, calcium, magnesium, potassium and sulphur, and micronutrients, i.e. boron, zinc, manganese, iron, copper and molybdenum."@en .
 <https://soilwise-he.github.io/soil-health#SoilNutrientStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "soil nutrient status"@en .
 <https://soilwise-he.github.io/soil-health#SoilNutrientStatus> <http://www.w3.org/2004/02/skos/core#related> <https://soilwise-he.github.io/soil-health#Macronutrients> .

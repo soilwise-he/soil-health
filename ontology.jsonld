@@ -93,12 +93,12 @@
 }, {
   "@id" : "_:genid22",
   "http://purl.obolibrary.org/obo/BFO_0000066" : [ {
-    "@id" : "https://soilwise-he.github.io/soil-health#NaturalSoils"
+    "@id" : "https://soilwise-he.github.io/soil-health#AgriculturalSoils"
   } ]
 }, {
   "@id" : "_:genid23",
   "http://purl.obolibrary.org/obo/BFO_0000066" : [ {
-    "@id" : "https://soilwise-he.github.io/soil-health#AgriculturalSoils"
+    "@id" : "https://soilwise-he.github.io/soil-health#NaturalSoils"
   } ]
 }, {
   "@id" : "_:genid24",
