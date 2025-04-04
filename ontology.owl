@@ -5907,12 +5907,12 @@
         <agrontology:affects rdf:resource="https://soilwise-he.github.io/soil-health#SoilMicroorganismDiversity"/>
         <agrontology:affects>
             <rdf:Description>
-                <obo:BFO_0000066 rdf:resource="https://soilwise-he.github.io/soil-health#AgriculturalSoils"/>
+                <obo:BFO_0000066 rdf:resource="https://soilwise-he.github.io/soil-health#NaturalSoils"/>
             </rdf:Description>
         </agrontology:affects>
         <agrontology:affects>
             <rdf:Description>
-                <obo:BFO_0000066 rdf:resource="https://soilwise-he.github.io/soil-health#NaturalSoils"/>
+                <obo:BFO_0000066 rdf:resource="https://soilwise-he.github.io/soil-health#AgriculturalSoils"/>
             </rdf:Description>
         </agrontology:affects>
         <skos:definition xml:lang="en">Soil nutrient status is defined by appropriate levels of available macronutrients, i.e. nitrogen, phosphorus, calcium, magnesium, potassium and sulphur, and micronutrients, i.e. boron, zinc, manganese, iron, copper and molybdenum.</skos:definition>

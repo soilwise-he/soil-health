@@ -3910,9 +3910,9 @@ _:genid21 <http://aims.fao.org/aos/agrontology#makeUseOf> <https://soilwise-he.g
                                                                                                              <https://soilwise-he.github.io/soil-health#PlantSpeciesDiversity> ,
                                                                                                              <https://soilwise-he.github.io/soil-health#SoilAnimalDiversity> ,
                                                                                                              <https://soilwise-he.github.io/soil-health#SoilMicroorganismDiversity> ,
-                                                                                                             [ <http://purl.obolibrary.org/obo/BFO_0000066> <https://soilwise-he.github.io/soil-health#AgriculturalSoils>
-                                                                                                             ] ,
                                                                                                              [ <http://purl.obolibrary.org/obo/BFO_0000066> <https://soilwise-he.github.io/soil-health#NaturalSoils>
+                                                                                                             ] ,
+                                                                                                             [ <http://purl.obolibrary.org/obo/BFO_0000066> <https://soilwise-he.github.io/soil-health#AgriculturalSoils>
                                                                                                              ] ;
                                                                <http://www.w3.org/2004/02/skos/core#definition> "Soil nutrient status is defined by appropriate levels of available macronutrients, i.e. nitrogen, phosphorus, calcium, magnesium, potassium and sulphur, and micronutrients, i.e. boron, zinc, manganese, iron, copper and molybdenum."@en ;
                                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "soil nutrient status"@en ;
