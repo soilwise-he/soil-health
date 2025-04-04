@@ -14,6 +14,7 @@ jobs:
           fetch-depth: 2
           path: '.'
       - run: git checkout HEAD^
+      - run: mkdir ./html
       - name: widoco
         id: widoco
         uses: soilwise-he/widoco-action@v0.3
