@@ -10,21 +10,23 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
         with:
+          repository: soilwise-he/soil-health-knowledge-graph
           fetch-depth: 2
           path: '.'
       - run: git checkout HEAD^
       - name: widoco
         id: widoco
-        uses: docker://ghcr.io/dgarijo/widoco:v1.4.25
+        uses: soilwise-he/widoco-action@v0.1
         with:
-          args: java -jar widoco.jar -ontURI https://github.com/soilwise-he/soil-health-knowledge-graph/raw/refs/heads/main/soil_health_KG.ttl -outFolder ./trg -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
+          init-file: soil_health_KG.ttl
+          options: -excludeProvenance -getOntologyMetadata
       - uses: actions/checkout@v4
         with:
           ref: gh-pages
           path: pages
       - name: Copy files
         run: |
-          cp -R ./trg ./pages
+          cp -R ./out ./pages
       - name: Commit files
         run: |
           cd pages
