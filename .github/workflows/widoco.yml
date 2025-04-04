@@ -21,7 +21,6 @@ jobs:
         - ./kg:/in
         - ./html:/out
     steps:
-      - run: mkdir /usr/local/widoco/config
       - run: echo "" > /usr/local/widoco/config/config.properties
       - run: java -jar /usr/local/widoco/widoco.jar -ontFile /in/soil_health_KG.ttl -outFolder /out -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
   pushhtml:
