@@ -13,9 +13,10 @@ jobs:
           repository: soilwise-he/soil-health-knowledge-graph
           fetch-depth: 2
           path: '.'
-      - run: git checkout HEAD^
-      - run: mkdir ./html
-      - run: chmod -R 777 ./html
+      - run: |
+          git checkout HEAD^
+          mkdir ./html
+          chmod -R 777 ./html
       - name: widoco
         id: widoco
         uses: soilwise-he/widoco-action@v0.3
@@ -29,7 +30,8 @@ jobs:
           path: pages
       - name: Copy files
         run: |
-          cp -R ./html/* ./pages
+          cp -R ./html/* ./pages -r
+          mv ./pages/index-en.html .pages/index.html
       - name: Commit files
         run: |
           cd pages
