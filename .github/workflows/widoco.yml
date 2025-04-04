@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: https://github.com/soilwise-he/soil-health-knowledge-graph
+          repository: soilwise-he/soil-health-knowledge-graph
           path: kg
   widoco:
     runs-on: ubuntu-latest
@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: https://github.com/soilwise-he/soil-health
+          repository: soilwise-he/soil-health
           ref: gh-pages
           path: pages
       - name: Copy files
