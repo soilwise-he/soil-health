@@ -17,8 +17,7 @@ jobs:
         id: widoco
         uses: docker://ghcr.io/dgarijo/widoco:v1.4.25
         with:
-          working-directory: /var/build/widoco
-          args: java -jar widoco.jar -ontURI https://github.com/soilwise-he/soil-health-knowledge-graph/raw/refs/heads/main/soil_health_KG.ttl -outFolder ./trg -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
+          args: java -jar /var/build/widoco/JAR/widoco.jar -ontURI https://github.com/soilwise-he/soil-health-knowledge-graph/raw/refs/heads/main/soil_health_KG.ttl -outFolder ./trg -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
       - uses: actions/checkout@v4
         with:
           ref: gh-pages
