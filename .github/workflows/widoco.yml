@@ -6,16 +6,19 @@ jobs:
   widoco:
     runs-on: ubuntu-latest
     name: A conversion of ttl to html
-    container:
-      image: ghcr.io/dgarijo/widoco:v1.4.25
-      volumes:
-        - ./pages:/usr/local/widoco/out
     steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          path: '.'
+      - run: git checkout HEAD^
       - name: widoco
-        run: ls 
-      - run: ls /usr/local/widoco
-      - run: ls /usr/local/widoco/JAR
-      - run: java -jar widoco.jar ontURI https://github.com/soilwise-he/soil-health-knowledge-graph/raw/refs/heads/main/soil_health_KG.ttl -outFolder /usr/local/widoco/out -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
+        id: widoco
+        uses: docker://ghcr.io/dgarijo/widoco:v1.4.25
+        with:
+          working-directory: /var/build/widoco
+          args: java -jar widoco.jar -ontURI https://github.com/soilwise-he/soil-health-knowledge-graph/raw/refs/heads/main/soil_health_KG.ttl -outFolder ./trg -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
       - uses: actions/checkout@v4
         with:
           ref: gh-pages
