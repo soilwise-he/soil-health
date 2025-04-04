@@ -30,8 +30,8 @@ jobs:
           path: pages
       - name: Copy files
         run: |
-          cp -R ./html/* ./pages -r
-          mv ./pages/index-en.html .pages/index.html
+          mv ./html/index-en.html .html/index.html
+          cp -r ./html/* ./pages 
       - name: Commit files
         run: |
           cd pages
