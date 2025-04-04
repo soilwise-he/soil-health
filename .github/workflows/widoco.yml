@@ -16,11 +16,12 @@ jobs:
     name: A conversion of ttl to html
     container:
       image: ghcr.io/dgarijo/widoco:v1.4.25
+      volumes:
+        - ./kg:/in
+        - ./html:/out
     steps:
-      - run: pwd
-      - run: ls
-      - run: java -jar /usr/local/widoco/widoco.jar -ontFile ./kg/soil_health_KG.ttl -outFolder ./html -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
-      - run: ls ./html
+      - run: ls /in
+      - run: java -jar /usr/local/widoco/widoco.jar -ontFile /in/soil_health_KG.ttl -outFolder /out -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
   pushhtml:
     runs-on: ubuntu-latest
     name: push latest html to gh-pages
