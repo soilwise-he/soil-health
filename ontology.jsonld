@@ -3,12 +3,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
 }, {
   "@id" : "_:genid10",
-  "http://aims.fao.org/aos/agrontology#valueUsedIn" : [ {
-    "@id" : "https://soilwise-he.github.io/soil-health#Alfisols"
+  "http://purl.obolibrary.org/obo/RO_0002212" : [ {
+    "@id" : "https://soilwise-he.github.io/soil-health#SoilStability"
   } ],
   "https://w3id.org/biolink/vocab/has_percentage" : [ {
     "@type" : "http://qudt.org/schema/qudt/floatPercentage",
-    "@value" : "0.5-0.77%"
+    "@value" : "1.2-1.5%"
   } ]
 }, {
   "@id" : "_:genid11",
@@ -93,12 +93,12 @@
 }, {
   "@id" : "_:genid22",
   "http://purl.obolibrary.org/obo/BFO_0000066" : [ {
-    "@id" : "https://soilwise-he.github.io/soil-health#NaturalSoils"
+    "@id" : "https://soilwise-he.github.io/soil-health#AgriculturalSoils"
   } ]
 }, {
   "@id" : "_:genid23",
   "http://purl.obolibrary.org/obo/BFO_0000066" : [ {
-    "@id" : "https://soilwise-he.github.io/soil-health#AgriculturalSoils"
+    "@id" : "https://soilwise-he.github.io/soil-health#NaturalSoils"
   } ]
 }, {
   "@id" : "_:genid24",
@@ -159,20 +159,20 @@
 }, {
   "@id" : "_:genid8",
   "http://aims.fao.org/aos/agrontology#valueUsedIn" : [ {
+    "@id" : "https://soilwise-he.github.io/soil-health#Alfisols"
+  } ],
+  "https://w3id.org/biolink/vocab/has_percentage" : [ {
+    "@type" : "http://qudt.org/schema/qudt/floatPercentage",
+    "@value" : "0.5-0.77%"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "http://aims.fao.org/aos/agrontology#valueUsedIn" : [ {
     "@id" : "https://soilwise-he.github.io/soil-health#Entisols"
   } ],
   "https://w3id.org/biolink/vocab/has_percentage" : [ {
     "@type" : "http://qudt.org/schema/qudt/floatPercentage",
     "@value" : "1.03-1.16%"
-  } ]
-}, {
-  "@id" : "_:genid9",
-  "http://purl.obolibrary.org/obo/RO_0002212" : [ {
-    "@id" : "https://soilwise-he.github.io/soil-health#SoilStability"
-  } ],
-  "https://w3id.org/biolink/vocab/has_percentage" : [ {
-    "@type" : "http://qudt.org/schema/qudt/floatPercentage",
-    "@value" : "1.2-1.5%"
   } ]
 }, {
   "@id" : "http://aims.fao.org/aos/agrontology#affects",
