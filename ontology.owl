@@ -4766,16 +4766,16 @@
         <skos:prefLabel xml:lang="en">SOC critical ranges</skos:prefLabel>
     </NamedIndividual>
     <rdf:Description rdf:nodeID="genid8">
-        <agrontology:valueUsedIn rdf:resource="https://soilwise-he.github.io/soil-health#Alfisols"/>
-        <vocab:has_percentage rdf:datatype="http://qudt.org/schema/qudt/floatPercentage">0.5-0.77%</vocab:has_percentage>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="genid9">
         <agrontology:valueUsedIn rdf:resource="https://soilwise-he.github.io/soil-health#Entisols"/>
         <vocab:has_percentage rdf:datatype="http://qudt.org/schema/qudt/floatPercentage">1.03-1.16%</vocab:has_percentage>
     </rdf:Description>
-    <rdf:Description rdf:nodeID="genid10">
+    <rdf:Description rdf:nodeID="genid9">
         <obo:RO_0002212 rdf:resource="https://soilwise-he.github.io/soil-health#SoilStability"/>
         <vocab:has_percentage rdf:datatype="http://qudt.org/schema/qudt/floatPercentage">1.2-1.5%</vocab:has_percentage>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid10">
+        <agrontology:valueUsedIn rdf:resource="https://soilwise-he.github.io/soil-health#Alfisols"/>
+        <vocab:has_percentage rdf:datatype="http://qudt.org/schema/qudt/floatPercentage">0.5-0.77%</vocab:has_percentage>
     </rdf:Description>
     
 

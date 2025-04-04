@@ -2662,14 +2662,14 @@ _:genid7 <http://purl.obolibrary.org/obo/BFO_0000066> <https://soilwise-he.githu
 <https://soilwise-he.github.io/soil-health#SOCCriticalRanges> <http://purl.org/dc/terms/source> <https://soilwise-he.github.io/soil-health#KayAngers1999> .
 <https://soilwise-he.github.io/soil-health#SOCCriticalRanges> <http://purl.org/dc/terms/source> <https://soilwise-he.github.io/soil-health#Lopes2013> .
 <https://soilwise-he.github.io/soil-health#SOCCriticalRanges> <http://sweetontology.net/relaSci/hasInterval> _:genid8 .
-_:genid8 <https://w3id.org/biolink/vocab/has_percentage> "0.5-0.77%"^^<http://qudt.org/schema/qudt/floatPercentage> .
-_:genid8 <http://aims.fao.org/aos/agrontology#valueUsedIn> <https://soilwise-he.github.io/soil-health#Alfisols> .
+_:genid8 <https://w3id.org/biolink/vocab/has_percentage> "1.03-1.16%"^^<http://qudt.org/schema/qudt/floatPercentage> .
+_:genid8 <http://aims.fao.org/aos/agrontology#valueUsedIn> <https://soilwise-he.github.io/soil-health#Entisols> .
 <https://soilwise-he.github.io/soil-health#SOCCriticalRanges> <http://sweetontology.net/relaSci/hasInterval> _:genid9 .
-_:genid9 <https://w3id.org/biolink/vocab/has_percentage> "1.03-1.16%"^^<http://qudt.org/schema/qudt/floatPercentage> .
-_:genid9 <http://aims.fao.org/aos/agrontology#valueUsedIn> <https://soilwise-he.github.io/soil-health#Entisols> .
+_:genid9 <https://w3id.org/biolink/vocab/has_percentage> "1.2-1.5%"^^<http://qudt.org/schema/qudt/floatPercentage> .
+_:genid9 <http://purl.obolibrary.org/obo/RO_0002212> <https://soilwise-he.github.io/soil-health#SoilStability> .
 <https://soilwise-he.github.io/soil-health#SOCCriticalRanges> <http://sweetontology.net/relaSci/hasInterval> _:genid10 .
-_:genid10 <https://w3id.org/biolink/vocab/has_percentage> "1.2-1.5%"^^<http://qudt.org/schema/qudt/floatPercentage> .
-_:genid10 <http://purl.obolibrary.org/obo/RO_0002212> <https://soilwise-he.github.io/soil-health#SoilStability> .
+_:genid10 <https://w3id.org/biolink/vocab/has_percentage> "0.5-0.77%"^^<http://qudt.org/schema/qudt/floatPercentage> .
+_:genid10 <http://aims.fao.org/aos/agrontology#valueUsedIn> <https://soilwise-he.github.io/soil-health#Alfisols> .
 <https://soilwise-he.github.io/soil-health#SOCCriticalRanges> <http://www.w3.org/2004/02/skos/core#prefLabel> "SOC critical ranges"@en .
 # 
 # https://soilwise-he.github.io/soil-health#SOCLevels
