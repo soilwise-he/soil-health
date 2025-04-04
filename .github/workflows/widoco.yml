@@ -9,6 +9,7 @@ jobs:
     container:
       image: ghcr.io/dgarijo/widoco:v1.4.25
     steps:
+      - name: widoco
       - run: java -jar /usr/local/widoco/widoco.jar ontURI https://github.com/soilwise-he/soil-health-knowledge-graph/raw/refs/heads/main/soil_health_KG.ttl -outFolder /usr/local/widoco/out -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
       - run: ls /usr/local/widoco/out
       - uses: actions/checkout@v4
