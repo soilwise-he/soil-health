@@ -20,7 +20,7 @@ jobs:
         id: widoco
         uses: soilwise-he/widoco-action@v0.2
         with:
-          file-input: soil_health_KG.ttl
+          file-input: ../../github/workspace/soil_health_KG.ttl
           options: -excludeProvenance -getOntologyMetadata
       - uses: actions/checkout@v4
         with:
