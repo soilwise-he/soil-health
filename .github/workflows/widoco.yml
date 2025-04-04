@@ -29,7 +29,7 @@ jobs:
           path: pages
       - name: Copy files
         run: |
-          cp -R ./html ./pages
+          cp -R ./html/* ./pages
       - name: Commit files
         run: |
           cd pages
