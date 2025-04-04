@@ -3,28 +3,20 @@ on:
   - delete
 
 jobs:
-  checkout:
-    runs-on: ubuntu-latest
-    name: get latest kg
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          repository: https://github.com/soilwise-he/soil-health-knowledge-graph
-          path: kg
   widoco:
     runs-on: ubuntu-latest
     name: A conversion of ttl to html
     container:
       image: ghcr.io/dgarijo/widoco:v1.4.25
     steps:
-      - run: pwd
-      - run: ls
-      - run: java -jar /usr/local/widoco/widoco.jar -ontFile ./kg/soil_health_KG.ttl -outFolder ./html -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
-      - run: ls ./html
-  pushhtml:
-    runs-on: ubuntu-latest
-    name: push latest html to gh-pages
-    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: https://github.com/soilwise-he/soil-health-knowledge-graph
+          path: kg
+      - run: mkdir /usr/local/widoco/out 
+      - run: wget https://github.com/soilwise-he/soil-health-knowledge-graph/raw/refs/heads/main/soil_health_KG.ttl -o ./kg.ttl 
+      - run: java -jar /usr/local/widoco/widoco.jar -ontFile ./kg/soil_health_KG.ttl -outFolder /usr/local/widoco/out -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
+      - run: ls /usr/local/widoco/out
       - uses: actions/checkout@v4
         with:
           repository: https://github.com/soilwise-he/soil-health
@@ -32,7 +24,7 @@ jobs:
           path: pages
       - name: Copy files
         run: |
-          cp -R  ./html ./pages
+          cp -R  /usr/local/widoco/out ./pages
       - name: Commit files
         run: |
           cd pages
