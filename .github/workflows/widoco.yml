@@ -15,6 +15,7 @@ jobs:
           path: '.'
       - run: git checkout HEAD^
       - run: mkdir ./html
+      - run: chmod -R 777 ./html
       - name: widoco
         id: widoco
         uses: soilwise-he/widoco-action@v0.3
