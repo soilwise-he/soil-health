@@ -12,6 +12,7 @@ jobs:
           repository: soilwise-he/soil-health-knowledge-graph
           path: kg
   widoco:
+    needs: checkout
     runs-on: ubuntu-latest
     name: A conversion of ttl to html
     container:
@@ -23,6 +24,7 @@ jobs:
       - run: ls /in
       - run: java -jar /usr/local/widoco/widoco.jar -ontFile /in/soil_health_KG.ttl -outFolder /out -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
   pushhtml:
+    needs: widoco
     runs-on: ubuntu-latest
     name: push latest html to gh-pages
     steps:
