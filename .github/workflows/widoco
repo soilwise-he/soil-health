@@ -1,0 +1,40 @@
+on:
+  - push
+  - delete
+
+jobs:
+  widoco:
+    runs-on: ubuntu-latest
+    name: A conversion of ttl to html
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          path: '.'
+      - run: git checkout HEAD^
+      - name: widoco
+        id: widoco
+        uses: docker://ghcr.io/dgarijo/widoco:1.4.25
+        with:
+          args: java -jar widoco.jar -ontURI https://github.com/soilwise-he/soil-health-knowledge-graph/raw/refs/heads/main/soil_health_KG.ttl -outFolder ./trg -rewriteAll -uniteSections -excludeProvenance -getOntologyMetadata
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: pages
+      - name: Copy files
+        run: |
+          cp -R ./trg ./pages
+      - name: Commit files
+        run: |
+          cd pages
+          git config --local user.email "noreply@lsc-hubs.org"
+          git config --local user.name "github-actions[bot]"
+          git add --all
+          git commit -a -m "Add converted"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages  
+          directory: pages
