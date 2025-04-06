@@ -52,8 +52,11 @@ jobs:
           file-input: /github/workspace/soil_health_KG.ttl
           folder-output: /github/workspace/public
           options: -excludeProvenance -getOntologyMetadata
-      # widoco creates output in index-en.html, move it to index.html
-      - run: mv -f ./public/index-en.html ./public/index.html
+      # widoco creates output in index-en.html & replace current domain in local anchors
+      - run: | 
+          mv -f ./public/index-en.html ./public/index.html
+          sed -i 's/id="https:\/\/soilwise-he.github.io\/soil-health#/id="/g' ./public/index.html
+          sed -i 's/href="#https:\/\/soilwise-he.github.io\/soil-health#/href="/g' ./public/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
