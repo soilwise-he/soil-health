@@ -51,7 +51,7 @@ jobs:
         with:
           file-input: /github/workspace/soil_health_KG.ttl
           folder-output: /github/workspace/public
-          options: -excludeProvenance -getOntologyMetadata
+          options: -excludeProvenance -getOntologyMetadata -confFile /github/workspace/widoco.properties
       # widoco creates output in index-en.html & replace current domain in local anchors
       - run: | 
           mv -f ./public/index-en.html ./public/index.html
